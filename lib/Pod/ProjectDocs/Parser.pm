@@ -726,10 +726,14 @@ sub _get_data {
         src      => $doc->get_output_src_path,
         mgr_desc => $mgr_desc,
     });
+    return $text if $^O ne 'MSWin32';
+
+    while ( $text =~ s|href="(.*?)\\(.*?)"|href="$1/$2"| ) {
+        next;
+    }
     return $text;
 }
 
 
 1;
 __END__
-

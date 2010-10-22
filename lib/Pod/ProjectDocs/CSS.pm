@@ -11,6 +11,7 @@ sub tag {
     my($self, $doc) = @_;
     my($name, $path) = fileparse $doc->get_output_path, qw/\.html/;
     my $relpath = File::Spec->abs2rel($self->get_output_path, $path);
+    $relpath =~ s:\\:/:g if $^O eq 'MSWin32';
     return sprintf qq|<link rel="stylesheet" type="text/css" href="%s" />|, $relpath;
 }
 

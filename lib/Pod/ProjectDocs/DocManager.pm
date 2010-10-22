@@ -52,6 +52,7 @@ sub _find_files {
                 my $relpath = File::Spec->catdir( $reldir, $fname );
                 $relpath .= ".";
                 $relpath .= $suffix;
+                $relpath =~ s:\\:/:g if $^O eq 'MSWin32';
                 my $matched = 0;
 
                 foreach my $regex ( @{ $self->config->except } ) {
