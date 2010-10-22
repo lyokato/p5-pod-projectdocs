@@ -10,7 +10,7 @@ Sample::Project - Sample project for testing Pod::ProjectDocs
 
 =head1 SYNOPSIS
 
-  blah blah blah
+  blah blah blah mäh
 
 =head1 DESCRIPTION
 
