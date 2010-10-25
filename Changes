@@ -1,5 +1,9 @@
 Revision history for Perl extension Pod::ProjectDocs.
 
+0.39 Tue Oct 26 02:54:00 2010
+    - updated for windows compatibility. Thanks to wchristian 
+      http://github.com/lyokato/p5-pod-projectdocs/pull/1
+
 0.38 Thr Mar 11 01:20:00 2010
     - fixed pod2projdocs typo
       Thanks to Tokuhiro Matsuno and Naoki Tomita

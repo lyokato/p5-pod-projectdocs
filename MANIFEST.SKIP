@@ -11,3 +11,5 @@
 \.cvsignore
 ^9\d_.*\.t
 \.svn
+\.git
+\.shipit
