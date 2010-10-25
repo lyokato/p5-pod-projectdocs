@@ -1,8 +1,3 @@
-# auto-generated shipit config file.
-steps = CommitMessageWrap, FindVersion, ChangeVersion, CheckChangeLog, DistTest, Commit, Tag, MakeDist, UploadCPAN
-
-svn.tagpattern = release-%v
-commit_message.format = lang/perl/Pod-ProjectDocs: %msg
-
-# svn.tagpattern = http://code.example.com/svn/tags/MyProj-%v
-# CheckChangeLog.files = ChangeLog, MyProj.CHANGES
+steps = FindVersion, ChangeVersion, CheckChangeLog, DistTest, Commit, Tag, MakeDist, UploadCPAN
+git.tagpattern = release-%v
+git.push_to = origin
