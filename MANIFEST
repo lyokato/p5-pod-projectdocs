@@ -25,8 +25,8 @@ lib/Pod/ProjectDocs/Parser/JavaScriptPod.pm
 lib/Pod/ProjectDocs/Parser/PerlPod.pm
 lib/Pod/ProjectDocs/Template.pm
 Makefile.PL
-MANIFEST
-META.yml			Module meta-data (added by MakeMaker)
+MANIFEST			This list of files
+META.yml
 README
 t/00_compile.t
 t/01_project.t
