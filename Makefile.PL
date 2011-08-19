@@ -22,6 +22,5 @@ features(
     recommends('Syntax::Highlight::Universal'),
   ]
 );
-auto_install;
 WriteAll;
 
