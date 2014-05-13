@@ -6,7 +6,7 @@ use File::Basename;
 use File::Spec;
 use File::Copy;
 
-__PACKAGE__->mk_accessors(qw/origin suffix origin_root title/);
+__PACKAGE__->mk_accessors(qw/origin suffix origin_root title namespace_deliminator/);
 __PACKAGE__->data( do{ local $/; <DATA> } );
 
 sub _init {
@@ -29,7 +29,7 @@ sub _set_relpath {
     $self->_check_dir($reldir, File::Spec->catdir($outroot, "src"));
     my $relpath = File::Spec->catdir($reldir, $name);
     $relpath =~ s:\\:/:g if $^O eq 'MSWin32';
-    $self->name( join "-", File::Spec->splitdir($relpath) );
+    $self->name( join $self->config->namespace_deliminator, File::Spec->splitdir($relpath) );
     $self->relpath($relpath.".".$suffix.".html");
 }
 
