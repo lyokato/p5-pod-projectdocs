@@ -29,7 +29,7 @@ sub _set_relpath {
     $self->_check_dir($reldir, File::Spec->catdir($outroot, "src"));
     my $relpath = File::Spec->catdir($reldir, $name);
     $relpath =~ s:\\:/:g if $^O eq 'MSWin32';
-    $self->name( join $self->config->namespace_deliminator, File::Spec->splitdir($relpath) );
+    $self->name( join $self->config->namespace_delimiter, File::Spec->splitdir($relpath) );
     $self->relpath($relpath.".".$suffix.".html");
 }
 

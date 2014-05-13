@@ -17,14 +17,14 @@ __PACKAGE__->mk_accessors(qw/
     forcegen
     lang
     except
-    namespace_deliminator
+    namespace_delimiter
 /);
 
-Readonly my $DEFAULT_TITLE                 => qq/MyProject's Libraries/;
-Readonly my $DEFAULT_DESC                  => qq/manuals and libraries/;
-Readonly my $DEFAULT_CHARSET               => qq/UTF-8/;
-Readonly my $DEFAULT_LANG                  => qq/en/;
-Readonly my $DEFAULT_NAMESPACE_DELIMINATOR => qq/-/;
+Readonly my $DEFAULT_TITLE               => qq/MyProject's Libraries/;
+Readonly my $DEFAULT_DESC                => qq/manuals and libraries/;
+Readonly my $DEFAULT_CHARSET             => qq/UTF-8/;
+Readonly my $DEFAULT_LANG                => qq/en/;
+Readonly my $DEFAULT_NAMESPACE_DELIMITER => qq/-/;
 
 sub new {
     my $class = shift;
@@ -35,17 +35,17 @@ sub new {
 
 sub _init {
     my($self, %args) = @_;
-    $self->title                ( $args{title}                 || $DEFAULT_TITLE                 );
-    $self->desc                 ( $args{desc}                  || $DEFAULT_DESC                  );
-    $self->charset              ( $args{charset}               || $DEFAULT_CHARSET               );
-    $self->lang                 ( $args{lang}                  || $DEFAULT_LANG                  );
-    $self->namespace_deliminator( $args{namespace_deliminator} || $DEFAULT_NAMESPACE_DELIMINATOR );
-    $self->verbose              ( $args{verbose}                                                 );
-    $self->index                ( $args{index}                                                   );
-    $self->outroot              ( $args{outroot}                                                 );
-    $self->libroot              ( $args{libroot}                                                 );
-    $self->forcegen             ( $args{forcegen}                                                );
-    $self->except               ( $args{except}                                                  );
+    $self->title              ( $args{title}               || $DEFAULT_TITLE               );
+    $self->desc               ( $args{desc}                || $DEFAULT_DESC                );
+    $self->charset            ( $args{charset}             || $DEFAULT_CHARSET             );
+    $self->lang               ( $args{lang}                || $DEFAULT_LANG                );
+    $self->namespace_delimiter( $args{namespace_delimiter} || $DEFAULT_NAMESPACE_DELIMITER );
+    $self->verbose            ( $args{verbose}                                             );
+    $self->index              ( $args{index}                                               );
+    $self->outroot            ( $args{outroot}                                             );
+    $self->libroot            ( $args{libroot}                                             );
+    $self->forcegen           ( $args{forcegen}                                            );
+    $self->except             ( $args{except}                                              );
 }
 
 1;
