@@ -270,9 +270,9 @@ if you set this parameter as regex, the file matches this regex won't be checked
     ...other parameters
   );
 
-=item namespace_deliminator
+=item namespace_delimiter
 
-string used for deliminating namespaces (e.g. deliminator '::' will cause File::Spec.
+string used for delimiting namespaces (e.g. delimiter '::' will cause File::Spec).
 default is '-'.
 
 =back
