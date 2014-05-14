@@ -6,7 +6,7 @@ use File::Basename;
 use File::Spec;
 use File::Copy;
 
-__PACKAGE__->mk_accessors(qw/origin suffix origin_root title namespace_deliminator/);
+__PACKAGE__->mk_accessors(qw/origin suffix origin_root title/);
 __PACKAGE__->data( do{ local $/; <DATA> } );
 
 sub _init {
