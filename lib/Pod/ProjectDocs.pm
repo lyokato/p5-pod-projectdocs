@@ -270,6 +270,11 @@ if you set this parameter as regex, the file matches this regex won't be checked
     ...other parameters
   );
 
+=item namespace_delimiter
+
+string used for delimiting namespaces (e.g. delimiter '::' will cause File::Spec).
+default is '-'.
+
 =back
 
 =head1 pod2projdocs
