@@ -163,7 +163,7 @@ sub get_managers_json {
             push @$records, $record;
         }
     }
-    return $js->encode($records);
+    return $js->canonical()->encode($records);
 }
 
 sub _croak {
